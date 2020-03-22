@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+    Titre: {{ object.name }}
+</h1>
+
+<h2>
+    Lieu: {{ object.place }}
+</h2>
+
+<h3>
+    Description: {% if object.description != None %}{{ object.description }}{% else %}in coming soon{% endif %}
+</h3>
+{% endblock %}
