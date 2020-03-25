@@ -8,6 +8,12 @@
 <h2>
     Lieu: {{ object.place }}
 </h2>
+    <img src="/{{object.photo}}"
+       width="400"
+     alt="{{ object.name }}">
+
+
+
 
 <h3>
     Description: {% if object.description != None %}{{ object.description }}{% else %}in coming soon{% endif %}
