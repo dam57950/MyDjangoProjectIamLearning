@@ -19,12 +19,12 @@ from django.urls import path
 from page.views import home_view, contact_view
 from blog.views import photo_detail_view
 
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
-    path('', home_view, name='home'),
-    path('contact/', contact_view),
-
-    path('blog/', photo_detail_view)
-]
+                  path('admin/', admin.site.urls),
+                  path('', home_view, name='home'),
+                  path('contact/', contact_view),
+                  path('blog/', photo_detail_view)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

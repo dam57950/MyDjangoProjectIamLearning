@@ -6,7 +6,7 @@ from .models import PhotoElement
 # Create your views here.
 
 def photo_detail_view(request, *args, **kwdargs):
-    obj = PhotoElement.objects.get(id=3)
+    obj = PhotoElement.objects.get(id=9)
     #    context = {
     #        'titre': obj.name,
     #        'lieu': obj.place,
