@@ -1,22 +1,53 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>
+<div class="container">
+    <h1>
     Titre: {{ object.name }}
 </h1>
 
 <h2>
     Lieu: {{ object.place }}
 </h2>
+</div>
+<div class="container red">
+    <div class="container">
+        <div class="row">
+                <div class="col">
+                  1 of 3
+                </div>
+                <div class="col-6">
+                  2 of 3 (wider)
+                </div>
+                <div class="col">
+                  3 of 3
+                </div>
+        </div>
 
-    
-    <img src="{{object.image.filters.invert.thumbnail.400x400.url}}" alt=" "/>
+        <div class="row">
 
+            <article class="col-3">
+                <img src="{{object.image.thumbnail.200x200.url}}" alt=" "/>
+            </article>
+            <article class="col-6">
+                <img src="{{object.image.thumbnail.200x200.url}}" alt=" "/>
+            </article>
+            <article class="col">
+                <img src="{{object.image.thumbnail.200x200.url}}" alt=" "/>
+            </article>
+            <button class="btn btn-success"> so good</button>
+        </div>
+    </div>
+</div>
 
+    <div class="container">
 <h3>
-    Description: {% if object.description != None %}{{ object.description }}{% else %}in coming soon{% endif %}
+    Description: {% if object.description != None %}{{ object.description }}{% else %}is coming soon{% endif %}
 </h3>
 
-    Little modif to test github
+
+    Little change to test github
+
+    </div>
 
 {% endblock %}
